@@ -23,19 +23,23 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 const styles = theme => ({
   button: {
-    margin: '20px'
+    margin: '20px',
+    color: 'black',
   },
   textField: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
+    color: 'black',
   },
   root: {
     flexGrow: 1,
     height: 250,
+    color: 'black',
   },
   input: {
     display: 'flex',
     padding: 0,
+    color: 'black',
   },
   valueContainer: {
     display: 'flex',
@@ -43,26 +47,32 @@ const styles = theme => ({
     flex: 1,
     alignItems: 'center',
     overflow: 'hidden',
+    color: 'black',
   },
   chip: {
     margin: `${theme.spacing.unit / 2}px ${theme.spacing.unit / 4}px`,
+    color: 'black',
   },
   chipFocused: {
     backgroundColor: emphasize(
       theme.palette.type === 'light' ? theme.palette.grey[300] : theme.palette.grey[700],
       0.08,
     ),
+    color: 'black',
   },
   noOptionsMessage: {
     padding: `${theme.spacing.unit}px ${theme.spacing.unit * 2}px`,
+    color: 'black',
   },
   singleValue: {
     fontSize: 16,
+    color: 'black',
   },
   placeholder: {
     position: 'absolute',
     left: 2,
     fontSize: 16,
+    color: 'black',
   },
   paper: {
     position: 'absolute',
@@ -70,31 +80,37 @@ const styles = theme => ({
     marginTop: theme.spacing.unit,
     left: 0,
     right: 0,
+    color: 'black',
   },
   divider: {
     height: theme.spacing.unit * 2,
+    color: 'black',
   }
 });
 
 const dialerContainer = css`
   height: 400px;
   background-color: #FFFFFF;
+  color: 'black',
 `
 
 const agentDesktop = css`
   display: flex;
   flex-direction: column;
   height: 400px;
+  color: 'black',
 `
 
 const numpadContainer = css`
   align-self: center;
+  color: 'black',
 `
 
 const functionButtons = css`
   display: flex;
   align-items: center;
   justify-content: center;
+  color: 'black',
 `
 
 const screen = css`
@@ -104,12 +120,14 @@ const screen = css`
   color: #9E9E9E;
   font-weight: 100;
   padding: 10px;
+  color: 'black',
 `
 
 const buttonRow = css`
   width: 100%;
   display: flex;
   color: #000000 !important;
+  color: 'black',
 `
 
 const plus = css`
@@ -118,6 +136,7 @@ const plus = css`
   text-overflow: ellipsis;
   direction: rtl;
   font-size: 26px !important;
+  color: 'black',
 `
 
 const screenMainLine = css`
@@ -131,6 +150,7 @@ const screenWrapper = css`
   align-items: center;
   justify-content: flex-end;
   padding-left: 20px;
+  color: 'black',
 `
 
 const backspaceButton = css``
@@ -458,19 +478,19 @@ export class DialPad extends React.Component {
     return (
       <div>
         <div className={(this.props.activeView === 'agent-desktop' || this.props.activeView === 'agentdesktop') ? agentDesktop : dialerContainer} >
-        <this.screen />
-        <this.directory />
-        <div className={numpadContainer}>
-          {this.buttons.map((button) => (button))}
-          <this.plusButton/>
-        </div>
-        <div className={functionButtons}>
-          <IconButton color='inherit' className={classes.button} component='div'>
-            <this.functionButtons/>
-          </IconButton>
+          <this.screen />
+          <this.directory />
+          <div className={numpadContainer}>
+            {this.buttons.map((button) => (button))}
+            <this.plusButton/>
+          </div>
+          <div className={functionButtons}>
+            <IconButton color='inherit' className={classes.button} component='div'>
+              <this.functionButtons/>
+            </IconButton>
+          </div>
         </div>
       </div>
-    </div>
   )}
 }
 

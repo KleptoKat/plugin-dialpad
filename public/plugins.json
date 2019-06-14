@@ -5,9 +5,12 @@
     "class": "DialpadPlugin",
     "requires": [
       {
-        "@twilio/flex-ui": "^1.5.0"
+        "@twilio/flex-ui": "^1",
+        "emotion": "^9.2.12",
+        "react-select": "^3.0.3",
+        "@material-ui/core": "^1.5.1"
       }
     ],
-    "src": "http://localhost:8080/plugin-dialpad.js"
+    "src": "http://localhost:3000/plugin-dialpad.js"
   }
 ]
